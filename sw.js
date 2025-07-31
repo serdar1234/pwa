@@ -2,16 +2,16 @@ const VERSION = "v1.1";
 const CACHE_NAME = `cycle-tracker-${VERSION}`;
 
 const APP_STATIC_RESOURCES = [
-  "/",
-  "/index.html",
-  "/style.css",
-  "/app.js",
-  "/cycletracker.json",
-  "/icons/circle.svg",
-  "/utilities/index.js",
-  "/utilities/storage.js",
-  "/utilities/checkDatesInvalid.js",
-  "/utilities/renderPastPeriods.js",
+  "/.",
+  "/.index.html",
+  "/.style.css",
+  "/.app.js",
+  "/.cycletracker.json",
+  "/.icons/circle.svg",
+  "/.utilities/index.js",
+  "/.utilities/storage.js",
+  "/.utilities/checkDatesInvalid.js",
+  "/.utilities/renderPastPeriods.js",
 ];
 
 self.addEventListener("install", (event) => {
@@ -44,7 +44,7 @@ self.addEventListener("fetch", (event) => {
   // when seeking an HTML page
   if (event.request.mode === "navigate") {
     // Return to the index.html page
-    event.respondWith(caches.match("/"));
+    event.respondWith(caches.match("/."));
     return;
   }
 
