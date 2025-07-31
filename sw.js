@@ -1,4 +1,4 @@
-const VERSION = "v5";
+const VERSION = "v6";
 const CACHE_NAME = `cycle-tracker-${VERSION}`;
 
 const APP_STATIC_RESOURCES = [
@@ -9,7 +9,7 @@ const APP_STATIC_RESOURCES = [
   "/icons/circle.svg",
   "/utilities/index.js",
   "/utilities/storage.js",
-  "/utilities/checkDateInvalid.js",
+  "/utilities/checkDatesInvalid.js",
   "/utilities/renderPastPeriods.js",
 ];
 
