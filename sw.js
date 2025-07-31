@@ -1,4 +1,4 @@
-const VERSION = "v6";
+const VERSION = "v1.1";
 const CACHE_NAME = `cycle-tracker-${VERSION}`;
 
 const APP_STATIC_RESOURCES = [
@@ -6,6 +6,7 @@ const APP_STATIC_RESOURCES = [
   "/index.html",
   "/style.css",
   "/app.js",
+  "/cycletracker.json",
   "/icons/circle.svg",
   "/utilities/index.js",
   "/utilities/storage.js",
@@ -31,6 +32,7 @@ self.addEventListener("activate", (event) => {
           if (name !== CACHE_NAME) {
             return caches.delete(name);
           }
+          return Promise.resolve();
         })
       );
       await clients.claim();
