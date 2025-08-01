@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" xml:space="preserve" style="background:#363"><circle style="stroke:#cfc;stroke-width:45;stroke-dasharray:none;stroke-linecap:butt;stroke-dashoffset:0;stroke-linejoin:miter;stroke-miterlimit:4;fill:none" cx="300" cy="300" r="225"/><path style="stroke:#cfc;stroke-width:50" d="M300 70v455M70 300h455M130 130l340 340m-340 0 340-340"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" style="background:#363">
+  <!-- Outer Circle -->
+  <circle cx="300" cy="300" r="225" fill="none" stroke="#cfc" stroke-width="45"/>
+  <!-- Dollar Sign ($) -->
+  <text x="300" y="440" text-anchor="middle" font-size="400" font-family="Arial, Helvetica, sans-serif" fill="#cfc" font-weight="bold" stroke="#363" stroke-width="10" paint-order="stroke">
+    $
+  </text>
+</svg>

@@ -1,11 +1,15 @@
 {
   "name": "Budget Tracker",
   "short_name": "CashTrack",
-  "description": "this is a PWA for tracking your spending habits",
+  "description": "A progressive web application for tracking your spending habits",
   "start_url": "/pwa/",
+  "default_locale": "en",
+  "lang": "en",
   "theme_color": "#eeffee",
   "background_color": "#eeffee",
   "display": "standalone",
+  "orientation": "any",
+  "categories": ["Finance", "Productivity", "Tools", "Personal"],
   "icons": [
     {
       "src": "icons/circle.svg",

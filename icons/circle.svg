@@ -1,3 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" style="background:#363" viewBox="0 0 600 600">
   <circle style="stroke:none;fill:#cfc" cx="300" cy="300" r="255"/>
+  <text x="300" y="440" text-anchor="middle" font-size="400" font-family="Arial, Helvetica, sans-serif" fill="#363" font-weight="bold" stroke="#363" stroke-width="10" paint-order="stroke">
+    $
+  </text>
 </svg>

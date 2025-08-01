@@ -30,16 +30,7 @@ circle {
 <circle style="stroke: #aca; stroke-width: 1;" cx="300" cy="300" r="212" />
 <circle style="stroke: #363; stroke-width: 4;" cx="300" cy="300" r="204" />
 
-<circle style="stroke: #fff; stroke-width: 29;" cx="300" cy="300" r="55" />
-<circle style="stroke: #cfc; stroke-width: 28;" cx="300" cy="300" r="55" />
-<circle style="stroke: #bfb; stroke-width: 22;" cx="300" cy="300" r="45" />
-<circle style="stroke: #afa; stroke-width: 18;" cx="300" cy="300" r="45" />
-<circle style="stroke: #9f9; stroke-width: 12;" cx="300" cy="300" r="25" />
-<circle style="stroke: #363; stroke-width: 3;" cx="300" cy="300" r="69" />
-<circle style="stroke: #363; stroke-width: 3;" cx="300" cy="300" r="55" />
-<circle style="stroke: #2a2; stroke-width: 1;" cx="300" cy="300" r="50" />
-<circle style="stroke: #1b1; stroke-width: 1;" cx="300" cy="300" r="45" />
-<circle style="stroke: #aca; stroke-width: 1;" cx="300" cy="300" r="40" />
-<circle style="stroke: #bdb; stroke-width: 1;" cx="300" cy="300" r="35" />
-<circle style="fill: #363; stroke-width: 0;" cx="300" cy="300" r="28" />
+<text x="300" y="440" text-anchor="middle" font-size="400" font-family="Arial, Helvetica, sans-serif" fill="#cfc" font-weight="bold" stroke="#363" stroke-width="10" paint-order="stroke">
+    $
+  </text>
 </svg>
