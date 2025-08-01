@@ -3,6 +3,14 @@ body {
   background-color: #efe;
 }
 
+h1,
+h2 {
+  font-family: "Roboto", Arial, sans-serif;
+  text-transform: capitalize;
+  color: #1b3409;
+  margin-left: 1rem;
+}
+
 ul,
 fieldset,
 legend {

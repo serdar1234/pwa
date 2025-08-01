@@ -1,5 +1,5 @@
 export function checkSumInvalid(s) {
-  if (s < 1) {
+  if (Number(s) < 1) {
     alert("Please enter a valid amount of money");
     return true;
   }
