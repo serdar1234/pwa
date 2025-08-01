@@ -1,4 +1,4 @@
-const VERSION = "v0.3";
+const VERSION = "v0.4.2";
 const CACHE_NAME = `budget-tracker-${VERSION}`;
 
 const APP_STATIC_RESOURCES = [
@@ -10,6 +10,7 @@ const APP_STATIC_RESOURCES = [
   "/icons/circle.svg",
   "/utilities/index.js",
   "/utilities/storage.js",
+  "/utilities/checkSumInvalid.js",
   "/utilities/checkDateInvalid.js",
   "/utilities/renderPastRecords.js",
 ];

@@ -1,5 +1,6 @@
 import {
   checkDateInvalid,
+  checkSumInvalid,
   storeNewRecord,
   renderPastRecords,
 } from "./utilities/index.js";
@@ -15,14 +16,18 @@ newRecordForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const dateValue = newDate.value;
-  const moneyValue = money.value;
+  const moneySum = money.value;
   const activityValue = activity.value;
 
   if (checkDateInvalid.call(this, dateValue)) {
     return;
   }
 
-  storeNewRecord(dateValue, moneyValue, activityValue);
+  if (checkSumInvalid.call(this, moneySum)) {
+    return;
+  }
+
+  storeNewRecord(dateValue, moneySum, activityValue);
 
   renderPastRecords();
 
