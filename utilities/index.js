@@ -1,5 +1,5 @@
-import { checkDatesInvalid } from "./checkDatesInvalid.js";
-import { storeNewPeriod } from "./storage.js";
-import { renderPastPeriods } from "./renderPastPeriods.js";
+import { checkDateInvalid } from "./checkDateInvalid.js";
+import { storeNewRecord } from "./storage.js";
+import { renderPastRecords } from "./renderPastRecords.js";
 
-export { checkDatesInvalid, storeNewPeriod, renderPastPeriods };
+export { checkDateInvalid, storeNewRecord, renderPastRecords };

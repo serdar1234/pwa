@@ -1,7 +1,7 @@
 {
-  "name": "Cycle Tracker",
-  "short_name": "CTrack",
-  "description": "this is a hoax PWA for tracking dates",
+  "name": "Budget Tracker",
+  "short_name": "CashTrack",
+  "description": "this is a PWA for tracking your spending habits",
   "start_url": "/",
   "theme_color": "#eeffee",
   "background_color": "#eeffee",

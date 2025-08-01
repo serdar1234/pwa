@@ -1,17 +1,17 @@
-const VERSION = "v1.1";
-const CACHE_NAME = `cycle-tracker-${VERSION}`;
+const VERSION = "v0.1";
+const CACHE_NAME = `budget-tracker-${VERSION}`;
 
 const APP_STATIC_RESOURCES = [
   "/",
   "/index.html",
   "/style.css",
   "/app.js",
-  "/cycletracker.json",
+  "/budgetTracker.json",
   "/icons/circle.svg",
   "/utilities/index.js",
   "/utilities/storage.js",
-  "/utilities/checkDatesInvalid.js",
-  "/utilities/renderPastPeriods.js",
+  "/utilities/checkDateInvalid.js",
+  "/utilities/renderPastRecords.js",
 ];
 
 self.addEventListener("install", (event) => {
@@ -41,24 +41,19 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  // when seeking an HTML page
   if (event.request.mode === "navigate") {
-    // Return to the index.html page
     event.respondWith(caches.match("/"));
     return;
   }
 
-  // For every other request type
   event.respondWith(
     (async () => {
       const cache = await caches.open(CACHE_NAME);
       const cachedResponse = await cache.match(event.request);
       if (cachedResponse) {
-        // Return the cached response if it's available.
         console.log("error");
         return cachedResponse;
       }
-      // Respond with a HTTP 404 response status.
       return new Response(null, { status: 404 });
     })()
   );

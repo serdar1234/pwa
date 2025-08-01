@@ -1,5 +1,5 @@
-export function checkDatesInvalid(start, end) {
-  if (!start || !end || start > end) {
+export function checkDateInvalid(d) {
+  if (!d || Date.now() < d) {
     this.reset();
     console.log("reset happened");
     return true;

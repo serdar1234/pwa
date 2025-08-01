@@ -1,38 +1,30 @@
 import {
-  checkDatesInvalid,
-  storeNewPeriod,
-  renderPastPeriods,
+  checkDateInvalid,
+  storeNewRecord,
+  renderPastRecords,
 } from "./utilities/index.js";
 
-// create constants for the form and the form controls
-const newPeriodFormEl = document.getElementById("form-id");
-const startDateInputEl = document.getElementById("start-date");
-const endDateInputEl = document.getElementById("end-date");
+const newRecordForm = document.getElementById("form-id");
+const newDate = document.getElementById("date");
+const money = document.getElementById("money");
+const activity = document.getElementById("activity");
 
-// Start the app by rendering the past periods.
-renderPastPeriods();
+renderPastRecords();
 
-// Listen to form submissions.
-newPeriodFormEl.addEventListener("submit", function (event) {
-  // Prevent the form from submitting to the server
-  // since everything is client-side.
+newRecordForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  // Get the start and end dates from the form.
-  const startDate = startDateInputEl.value;
-  const endDate = endDateInputEl.value;
+  const dateValue = newDate.value;
+  const moneyValue = money.value;
+  const activityValue = activity.value;
 
-  // Check if the dates are invalid
-  if (checkDatesInvalid.call(this, startDate, endDate)) {
+  if (checkDateInvalid.call(this, dateValue)) {
     return;
   }
 
-  // Store the new period in our client-side storage.
-  storeNewPeriod(startDate, endDate);
+  storeNewRecord(dateValue, moneyValue, activityValue);
 
-  // Refresh the UI.
-  renderPastPeriods();
+  renderPastRecords();
 
-  // Reset the form.
-  newPeriodFormEl.reset();
+  newRecordForm.reset();
 });

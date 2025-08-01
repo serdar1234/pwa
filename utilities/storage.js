@@ -1,29 +1,20 @@
-// Add the storage key as an app-wide constant
-const STORAGE_KEY = "period-tracker";
+const STORAGE_KEY = "budget-tracker";
 
-export function storeNewPeriod(start, end) {
-  // Get data from storage.
-  const periods = getAllStoredPeriods();
+export function storeNewRecord(d, money, activity) {
+  const records = getAllStoredRecords();
 
-  // Add the new period object to the end of the array of period objects.
-  periods.push({ start, end });
+  records.push({ d, money, activity });
 
-  // Sort the array so that periods are ordered by start date, from newest
-  // to oldest.
-  periods.sort((a, b) => new Date(b.start) - new Date(a.start));
+  records.sort((a, b) => new Date(b.d) - new Date(a.d));
 
-  // Store the updated array back in the storage.
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(periods));
+  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(records));
   // console.log(window.localStorage.getItem(STORAGE_KEY));
 }
 
-export function getAllStoredPeriods() {
-  // Get the string of period data from localStorage
+export function getAllStoredRecords() {
   const data = window.localStorage.getItem(STORAGE_KEY);
 
-  // If no periods were stored, default to an empty array
-  // otherwise, return the stored data as parsed JSON
-  const periods = data ? JSON.parse(data) : [];
+  const records = data ? JSON.parse(data) : [];
 
-  return periods;
+  return records;
 }
