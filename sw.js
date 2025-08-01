@@ -1,4 +1,4 @@
-const VERSION = "v0.1";
+const VERSION = "v0.3";
 const CACHE_NAME = `budget-tracker-${VERSION}`;
 
 const APP_STATIC_RESOURCES = [
